@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://duqgqtwl2ui"]
+
+[ext_resource type="PackedScene" uid="uid://d4fvs8qjs7i3x" path="res://Scenes/Entities/WorldViewer.tscn" id="1_1r6ip"]
+[ext_resource type="PackedScene" uid="uid://r2tcykohkw12" path="res://Scenes/Entities/HeroGeneric.tscn" id="2_lixft"]
+[ext_resource type="Script" uid="uid://crt1uxasft1hf" path="res://Scenes/Entities/ItemBase.gd" id="3_2a143"]
+[ext_resource type="Script" uid="uid://cch2u1gs7gr7i" path="res://Scenes/Entities/PoderBase.gd" id="4_xlvfx"]
+[ext_resource type="Script" uid="uid://42ct2o7nugm2" path="res://Scenes/Entities/CharacterSheet.gd" id="5_y3v7k"]
+[ext_resource type="Script" uid="uid://da3on5togsdbl" path="res://Scenes/Entities/TalentoBase.gd" id="6_hryqi"]
+[ext_resource type="PackedScene" uid="uid://ddstrcuwobyw4" path="res://Scenes/Entities/EnemyGeneric.tscn" id="7_xlvfx"]
+[ext_resource type="Script" uid="uid://b88ch31hqok64" path="res://Scenes/Entities/EnemySheet.gd" id="8_y3v7k"]
+
+[sub_resource type="Resource" id="Resource_imbg2"]
+script = ExtResource("5_y3v7k")
+metadata/_custom_type_script = "uid://42ct2o7nugm2"
+
+[sub_resource type="Resource" id="Resource_hryqi"]
+script = ExtResource("8_y3v7k")
+metadata/_custom_type_script = "uid://b88ch31hqok64"
+
+[node name="Main" type="Control" unique_id=1061811656]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WorldContainer" type="Node2D" parent="." unique_id=1371731946]
+
+[node name="WorldViewer" parent="WorldContainer" unique_id=1539848458 instance=ExtResource("1_1r6ip")]
+position = Vector2(520, 632)
+
+[node name="HeroGeneric" parent="WorldContainer" unique_id=1382350969 instance=ExtResource("2_lixft")]
+position = Vector2(-598, 588)
+CharacterSheet = SubResource("Resource_imbg2")
+
+[node name="Camera2D" type="Camera2D" parent="WorldContainer/HeroGeneric" unique_id=1387016061]
+zoom = Vector2(3, 3)
+
+[node name="EnemyGeneric" parent="WorldContainer" unique_id=771129241 instance=ExtResource("7_xlvfx")]
+position = Vector2(1649, 599)
+EnemySheet = SubResource("Resource_hryqi")
+
+[node name="UIContainer" type="Control" parent="." unique_id=1403143861]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TopBarContainer" type="Control" parent="." unique_id=1514416471]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ActionPanelContainer" type="Control" parent="." unique_id=1144311207]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FloatingTextContainer" type="CanvasLayer" parent="." unique_id=1267114441]

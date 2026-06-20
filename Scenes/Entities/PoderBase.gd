@@ -1,0 +1,2 @@
+class_name PODER_BASE
+extends Resource

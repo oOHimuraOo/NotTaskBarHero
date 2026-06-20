@@ -1,2 +1,0 @@
-class_name ENTIDADE_BASE
-extends CharacterBody2D

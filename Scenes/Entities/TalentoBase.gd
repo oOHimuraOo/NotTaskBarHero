@@ -1,0 +1,2 @@
+class_name TALENTO_BASE
+extends Resource

@@ -16,16 +16,19 @@ config/version="0.1"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://kxc0utx6xexn"
 
+[global_group]
+
+HitboxPlayer="Grupo de detecção da area de hitbox do player"
+HitboxInimigo="Grupo para a area de hibox do inimigo"
+
 [layer_names]
 
 2d_render/layer_1="Camada 1"
 2d_physics/layer_1="Mundo"
-2d_physics/layer_2="Player Hitbox"
-2d_physics/layer_3="Player Hurtbox"
-2d_physics/layer_4="Player"
-2d_physics/layer_5="Inimigo Hitbox"
-2d_physics/layer_6="Inimigo Hurtbox"
-2d_physics/layer_7="Inimigo"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="HurtBoxPlayer"
+2d_physics/layer_4="Enemy"
+2d_physics/layer_5="HurtBoxEnemy"
 
 [physics]
 
